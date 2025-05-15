@@ -27,6 +27,7 @@ function Signin() {
       authLocal.login(user);
 
       localStorage.setItem("user", JSON.stringify(user));
+      // console.log(localStorage.getItem("user"))
       navigate(redirectPath, { replace: true });
       alert("successful Signin");
     } catch (error) {
@@ -149,12 +150,20 @@ function Signin() {
                 value={userdata.password}
               />
             </div>
-            <button
-              onClick={signin}
-              className="w-full px-4 py-2 text-white font-medium bg-blue-600 hover:bg-blue-500 active:bg-blue-600 rounded-lg duration-150"
-            >
-              Sign in
-            </button>
+            <div className="space-y-2">
+              <Link
+                to={"/forgot-password"}
+                className="text-sm text-blue-600 hover:text-blue-500 font-medium"
+              >
+                Forgot password?
+              </Link>
+              <button
+                onClick={signin}
+                className="w-full px-4 py-2 text-white font-medium bg-blue-600 hover:bg-blue-500 active:bg-blue-600 rounded-lg duration-150"
+              >
+                Sign in
+              </button>
+            </div>
           </form>
         </div>
       </div>

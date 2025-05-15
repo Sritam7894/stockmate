@@ -27,6 +27,7 @@ const ProfileDropDown = (props) => {
     document.addEventListener("click", handleDropDown);
   }, []);
 
+
   return (
     <div className={`relative ${props.class}`}>
       <div className="flex items-center space-x-4">
@@ -52,7 +53,7 @@ const ProfileDropDown = (props) => {
       >
         <li>
           <Link
-            to={""}
+            to="/profile"
             className="block text-gray-600 lg:hover:bg-gray-50 lg:p-2.5"
           >
             Profile
@@ -81,6 +82,7 @@ const ProfileDropDown = (props) => {
     </div>
   );
 };
+
 
 export default function Dashboard() {
   const [menuState, setMenuState] = useState(false);
